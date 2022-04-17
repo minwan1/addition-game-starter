@@ -24,16 +24,41 @@
           <h3 class="text-center">
             <code>3초안에 맞출시 0.1 KLAY 지급 이벤트</code>
             <button type="button" 
-            class="btn btn-info pull-right" 
-            id="login" 
-            data-toggle="modal" 
-            data-target="#loginModal">로그인</button>
+              class="btn btn-info pull-right" 
+              id="login" 
+              data-toggle="modal" 
+              data-target="#loginModal">로그인
+            </button>
 
-            <button type="button" 
-            class="btn btn-info pull-right" 
-            id="logout" 
-            onclick="App.handleLogout()">로그아웃</button>
-          </h1>
+            <button type="button"
+              class="btn btn-info pull-right" 
+              id="logout" 
+              style="display: none;"
+              onclick="App.handleLogout()">로그아웃
+            </button>
+          </h3>
+          <div class="text-center" id="address"></div>
+          <div class="text-center" id="contractBalance"></div>
+          <hr />
+      </div>
+    </div>
+
+    <br />
+
+    <div id="spin"></div>
+    
+    <div class="row text-center">
+      <div class="col-md-2 col-md-offset-5">
+        <div id="owner" style="display: none"> 
+          <hr />
+          <lable>컨트랙에 KLAY 보내기</lable>
+          <div class="input-group">
+            <input type="number" class="form-control" id="amount" />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" onclick="App.deposit()">송금</button>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
